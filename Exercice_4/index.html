@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Exercice 4</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <input type="text" name="name" placeholder="Nom" id="name" value="">
+  <input type="text" name="firstname" placeholder="Prénom" id="firstname" value="">
+  <input type="text" name="birthdate" placeholder="Date de naissance" id="birthdate" value="">
+  <input type="text" name="birthplace" id="birthplace" placeholder="Lieu de naissance" value="">
+  <input type="text" name="job" id="job" placeholder="Travail" value="">
+  <input type="text" name="society" id="society" placeholder="Société" value="">
+  <button type="button" name="generate" id="generate">Générer</button>
+  <p id="text"></p>
+<script>
+$('#generate').click(function(){
+  var name = $('#name').val();
+  var firstname = $('#firstname').val();
+  var birthdate = $('#birthdate').val();
+  var birthplace = $('#birthplace').val();
+  var job = $('#job').val();
+  var society = $('#society').val();
+  $('#text').text(name + ' ' + firstname + ', né le ' + birthdate + ' à ' + birthplace + ', actuellement ' + job + ' à ' + society + '.');
+})
+</script>
+</body>
+</html>

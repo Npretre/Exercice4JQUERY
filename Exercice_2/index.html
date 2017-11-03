@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.js"></script>
+  <title>Exercice 2</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <form action="" method="post">
+    <input type="text" name="note1" id="note1" value="">
+    <input type="text" name="note2" id="note2" value="">
+    <input type="text" name="note3" id="note3" value="">
+    <input type="text" name="note4" id="note4" value="">
+    <input type="text" name="note5" id="note5" value="">
+    <button type="button" name="button" id="mix">Moyenne</button>
+  </form>
+  <p id="result"></p>
+  <p id="appreciation"></p>
+</div>
+<script>
+$('#mix').click(function(){
+  var note1 = $('#note1').val();
+  var note2 = $('#note2').val();
+  var note3 = $('#note3').val();
+  var note4 = $('#note4').val();
+  var note5 = $('#note5').val();
+  var moyenne = (parseInt(note1) + parseInt(note2) + parseInt(note3) + parseInt(note4) + parseInt(note5)) /5;
+  $('#result').text('Votre moyenne est de ' + moyenne);
+
+  if (moyenne < 10) {
+    $('#appreciation').text('En dessous de la moyenne');
+  }else if (moyenne > 10 && moyenne < 13) {
+    $('#appreciation').text('Moyen');
+  }else if (moyenne > 13 && moyenne < 16) {
+    $('#appreciation').text('Bien');
+  }else if (moyenne > 16 && moyenne < 20) {
+    $('#appreciation').text('Trés bien');
+  }else if (moyenne == 20) {
+    $('#appreciation').text('excellent');
+  }
+})
+</script>
+</body>
+</html>
